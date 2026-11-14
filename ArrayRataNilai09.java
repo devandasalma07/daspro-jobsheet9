@@ -5,7 +5,10 @@ public class ArrayRataNilai09 {
     public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
 
-    int[] nilaiMhs = new int[10];
+    System.out.print("Masukkan jumlah mahasiswa: ");
+    int jumlahMhs = sc.nextInt();
+
+    int[] nilaiMhs = new int[jumlahMhs];
     int total = 0;
     double rata2;
     int jumlahLulus = 0;
@@ -19,11 +22,8 @@ public class ArrayRataNilai09 {
             jumlahLulus++;
         }
     }
-    System.out.println("Banyaknya mahasiswa yang lulus: " + jumlahLulus);
-    
+
     rata2 = (double) total / nilaiMhs.length;
-    System.out.println("Total nilai: " + total);
-    System.out.println("Rata-rata: " + rata2);
     
     int tertinggi = nilaiMhs[0];
     int terendah = nilaiMhs[0];
@@ -31,6 +31,9 @@ public class ArrayRataNilai09 {
         if (nilaiMhs[i] > tertinggi) tertinggi = nilaiMhs[i];
         if (nilaiMhs[i] < terendah) terendah = nilaiMhs[i];
     }
+    System.out.println("Total nilai: " + total);
+    System.out.println("Rata-rata: " + rata2);
+    System.out.println("Banyaknya mahasiswa yang lulus: " + jumlahLulus);
     System.out.println("Nilai tertinggi: " + tertinggi);
     System.out.println("Nilai terendah: " + terendah);
 
